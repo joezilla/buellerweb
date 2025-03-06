@@ -40,11 +40,13 @@ export async function sendContactEmail(formData: FormData) {
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
+    console.log(`Sending to ` + process.env.RESEND_EMAIL);
+
     // Example of how you would send the email with Resend
   
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
-      to: [`process.env.RESEND_EMAIL`],
+      from: 'Contact Form <info@bueller.agency>',
+      to: process.env.RESEND_EMAIL ?? "info@bueller.agency",
       subject: `New contact form submission from ${name}`,
       text: `
         Name: ${name}
