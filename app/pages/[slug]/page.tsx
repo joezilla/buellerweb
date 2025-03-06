@@ -68,7 +68,7 @@ export default async function ContentfulPage({ params }: PageParams) {
                 <div className="container mx-auto px-6 py-16">
                     <div className="max-w-3xl mx-auto">
                         {!heroImage && <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">{title}</h1>}
-                        <div className="prose prose-lg max-w-none">
+                        <div className="prose prose-lg max-w-none prose-p:mb-8 [&>p]:mb-4">
                             {documentToReactComponents(body)}
                         </div>
                     </div>
