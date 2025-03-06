@@ -1,3 +1,6 @@
+// Force static page generation
+export const dynamic = 'force-static'
+
 import ContactForm from "@/components/contact-form"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
