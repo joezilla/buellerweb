@@ -1,5 +1,6 @@
 "use server"
 import { z } from "zod"
+import { Resend } from 'resend'
 
 // Create a schema for form validation
 const contactFormSchema = z.object({
@@ -9,8 +10,7 @@ const contactFormSchema = z.object({
 })
 
 // Initialize Resend (you would need to add RESEND_API_KEY to your environment variables)
-// For demo purposes, we'll just log the email content
-// const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendContactEmail(formData: FormData) {
   try {
@@ -41,10 +41,10 @@ export async function sendContactEmail(formData: FormData) {
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
     // Example of how you would send the email with Resend
-    /*
+  
     const { data, error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: ['your-email@example.com'],
+      to: [`process.env.RESEND_EMAIL`],
       subject: `New contact form submission from ${name}`,
       text: `
         Name: ${name}
@@ -62,7 +62,7 @@ export async function sendContactEmail(formData: FormData) {
         error: "Failed to send email. Please try again later."
       }
     }
-    */
+    
 
     return {
       success: true,
