@@ -18,6 +18,17 @@ export default function ContactForm() {
   })
 
   async function handleSubmit(formData: FormData) {
+    // Check honeypot field
+    const honeypot = formData.get('website')
+    if (honeypot) {
+      // Silently reject bot submissions
+      setFormState({
+        status: "success",
+        message: "Your message has been sent successfully. We'll get back to you soon!",
+      })
+      return
+    }
+
     setFormState({ status: "submitting", message: "" })
 
     try {
@@ -63,6 +74,19 @@ export default function ContactForm() {
         </div>
       ) : (
         <form id="contact-form" action={handleSubmit} className="space-y-6">
+          {/* Add honeypot field */}
+          <div className="hidden">
+            <label htmlFor="website">Website</label>
+            <Input
+              id="website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ display: 'none' }}
+            />
+          </div>
+
           {formState.status === "error" && (
             <div className="bg-red-50 border border-red-200 text-red-700 p-4 mb-4 flex items-start">
               <AlertCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
