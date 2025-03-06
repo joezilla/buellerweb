@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     // Revalidate both the specific page and the home page
     // (in case the content is used on the home page)
-    revalidatePath(`/${slug}`)
+    revalidatePath(`/pages/${slug}`)
     revalidatePath('/')
 
     return NextResponse.json(
