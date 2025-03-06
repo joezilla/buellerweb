@@ -22,7 +22,7 @@ export default function Navbar() {
     >
       <Link href="/" className="flex items-center space-x-2">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bueller%20Logo%20Black%20Background-p6kTKAQ2x0bpmvSqzjRCWZW3BCsT5x.png"
+          src="/bueller-logo-wh.png"
           alt="bueller logo"
           width={120}
           height={40}

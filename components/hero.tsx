@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/67c4926bab8965953a3e0cf9_pexels-fauxels-3184300.jpg-5k23qfas69UysvylbkYgCeVcFheRpX.jpeg"
+          src="/pexels-fauxels-3184300.jpg"
           alt="Team collaboration"
           fill
           className="object-cover brightness-[0.6]"
