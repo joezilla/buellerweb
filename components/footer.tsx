@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Github, Twitter, Linkedin } from "lucide-react"
+import { Mail } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-        
+
 
           {/* Legal */}
           <div className="col-span-1">
@@ -73,12 +73,8 @@ export default function Footer() {
               </Button>
             </motion.div>
             <div className="flex space-x-4 mt-4">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <Link href="https://www.linkedin.com/company/bueller-agency" className="text-gray-400 hover:text-white transition-colors">
+                <Image src="/linkedin-wide.png"  width="150"  height="144" alt="linkedin logo"  />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
@@ -92,4 +88,5 @@ export default function Footer() {
     </footer>
   )
 }
+
 
