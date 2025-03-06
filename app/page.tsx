@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 }
 
 // Force static page generation
-export const dynamic = 'force-static'
+// export const dynamic = 'force-static'
 
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"

@@ -1,5 +1,3 @@
-// Force static page generation
-export const dynamic = 'force-static'
 
 import ContactForm from "@/components/contact-form"
 import Navbar from "@/components/navbar"
@@ -36,29 +34,18 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-sm font-medium text-gray-500 mb-2">Office Location</h3>
                     <p className="text-black">
-                      12273 Dream Avenue,
-                      <br />
-                      London, 123456
-                      <br />
-                      United Kingdom
+                      We're proudly located in New Jersey, USA.
                     </p>
                   </div>
 
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 mb-2">Office Time</h3>
-                    <p className="text-black">
-                      Monday - Sunday
-                      <br />
-                      11am - 7pm
-                    </p>
-                  </div>
+                
 
                   <div>
                     <h3 className="text-sm font-medium text-gray-500 mb-2">Support</h3>
                     <p className="text-black">
-                      hello@bueller.com
+                      info@bueller.agency
                       <br />
-                      123 456 8888
+                      (609) 207 8993
                     </p>
                   </div>
                 </div>

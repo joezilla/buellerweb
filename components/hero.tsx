@@ -15,7 +15,7 @@ export default function Hero() {
           src="/pexels-fauxels-3184300.jpg"
           alt="Team collaboration"
           fill
-          className="object-cover brightness-[0.6]"
+          className="object-cover brightness-[2.1]"
           priority
         />
         <div className="absolute inset-0 bg-black/50 z-10" />
