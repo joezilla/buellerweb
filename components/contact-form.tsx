@@ -25,11 +25,12 @@ export default function ContactForm() {
 
       if (result.success) {
         setFormState({
-          status: "success",
+          status: "success", 
           message: "Your message has been sent successfully. We'll get back to you soon!",
         })
         // Reset form
-        document.getElementById("contact-form")?.reset()
+        const form = document.getElementById("contact-form") as HTMLFormElement
+        form?.reset()
       } else {
         setFormState({
           status: "error",
