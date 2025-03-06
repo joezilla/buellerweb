@@ -24,6 +24,8 @@ export async function POST(request: NextRequest) {
     // Get the slug from the entry
     const slug = body.fields?.slug?.['en-US'] || ''
     
+    console.log(`Revalidating ${slug}.`);
+
     // Revalidate both the specific page and the home page
     // (in case the content is used on the home page)
     revalidatePath(`/${slug}`)
@@ -31,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { 
-        message: 'Revalidation successful',
+        message: `Revalidation of ${slug} successful`,
         revalidated: true,
         now: Date.now()
       },
